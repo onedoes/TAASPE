@@ -1,4 +1,4 @@
-# TAASPE
+# TAASPE [![Build Status][travis-image]][travis-url]
 
 > Trello As A Service Pre-Experiment
 
@@ -79,4 +79,6 @@ app.delete(‘/todos/:id, function (req, res, err) {
 ```
 
 
+[travis-url]: http://travis-ci.org/onedoes/TAASPE
+[travis-image]: http://travis-ci.org/onedoes/TAASPE.svg?branch=master
 
