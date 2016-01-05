@@ -1,0 +1,36 @@
+---
+git:
+  depth: 1
+sudo: false
+cache:
+  directories:
+  - node_modules
+language: node_js
+matrix:
+  include:
+    #
+    - node_js: '0.8'
+    - node_js: '0.10'
+    - node_js: '0.11'
+    - node_js: '0.12'
+    - node_js: '1'
+    - node_js: '2'
+    - node_js: '3'
+    - node_js: '4'
+    - node_js: '5'
+    - node_js: node
+    #
+    - node_js: node
+      env: COVERAGE=true
+before_install:
+  - "NPM_VERSION=$(npm --version)"
+  - "[ '2.0.0' != `echo -e \"2.0.0\\n$NPM_VERSION\" | sort -Vr | head -n1` ] || npm install -g npm@2"
+  - "NPM_VERSION=$(npm --version)"
+  - "[ '3.0.0' != `echo -e \"3.0.0\\n$NPM_VERSION\" | sort -Vr | head -n1` ] || npm install -g npm"
+  - "[ $COVERAGE == false ] || npm install codecov.io"
+after_script:
+  - "[ $COVERAGE == false ] || npm run coverage"
+  - "[ $COVERAGE == false ] || cat ./coverage/lcov.info | ./node_modules/codecov.io/bin/codecov.io.js && rm -rf ./coverage"
+env:
+  global:
+    - COVERAGE=false
