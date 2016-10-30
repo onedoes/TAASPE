@@ -79,6 +79,13 @@ app.delete(‘/todos/:id, function (req, res, err) {
 ```
 
 
+## License
+
+    Copyright © One Does <onedoes.inc@gmail.com> 
+    This work is free. You can redistribute it and/or modify it under the
+    terms of the Do What The Fuck You Want To Public License, Version 2,
+    as published by Sam Hocevar. See the LICENCE file for more details.
+    
 [travis-url]: http://travis-ci.org/onedoes/TAASPE
 [travis-image]: http://travis-ci.org/onedoes/TAASPE.svg?branch=master
 
