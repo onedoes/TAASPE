@@ -1,0 +1,14 @@
+{
+  "name": "TAASPE",
+  "version": "0.0.1",
+  "description": "use trello as a database",
+  "main": "server.js",
+  "repository": "https://github.com/onedoes/TAASPE",
+  "author": "onedoes",
+  "dependencies": {
+  },
+  "devDependencies": {
+  },
+  "scripts": {
+  }
+}
